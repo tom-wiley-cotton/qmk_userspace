@@ -24,6 +24,8 @@
         { SONG(QWERTY_SOUND), SONG(COLEMAK_SOUND), SONG(DVORAK_SOUND) }
 #endif
 
+#define TAP_DANCE_ENABLE = yes
+
 /*
  * MIDI options
  */
