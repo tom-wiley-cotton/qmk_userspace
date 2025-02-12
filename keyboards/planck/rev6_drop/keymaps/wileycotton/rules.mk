@@ -1,3 +1,6 @@
+# Enable tap dance feature
+TAP_DANCE_ENABLE = yes
+
 # Existing audio config
 ifeq ($(strip $(AUDIO_ENABLE)), yes)
  SRC += muse.c
