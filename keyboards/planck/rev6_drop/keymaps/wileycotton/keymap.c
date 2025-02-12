@@ -3,33 +3,6 @@
 #    include "keymap.h"
 #endif
 
-// Tap Dance declarations
-// enum {
-//     TD_BSPC_OPT = 0
-// };
-
-// void td_backspace_finished(tap_dance_state_t *state, void *user_data) {
-//     if (state->pressed) {
-//         register_code(KC_LALT);
-//         register_code(KC_BSPC);
-//     } else {
-//         register_code(KC_BSPC);
-//         unregister_code(KC_BSPC);
-//     }
-// }
-
-// void td_backspace_reset(tap_dance_state_t *state, void *user_data) {
-//     if (state->pressed) {
-//         unregister_code(KC_LALT);
-//         unregister_code(KC_BSPC);
-//     }
-// }
-
-// // Tap Dance definitions
-// tap_dance_action_t tap_dance_actions[] = {
-//     [TD_BSPC_OPT] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_backspace_finished, td_backspace_reset)
-// };
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    [0] = LAYOUT(
     /* 
@@ -61,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
     //│        │        │        │        │        │        │        │        │        │        │        │        │
-       KC_ESC,  KC_LCTL, KC_LALT, KC_LGUI, MO(1),   KC_SPC,  TD(TD_BSPC_OPT), MO(2),   KC_RGUI, KC_LALT, KC_RCTL, MO(3)
+       KC_ESC,  KC_LCTL, KC_LALT, KC_LGUI, MO(1),   KC_SPC,  KC_BSPC, MO(2),   KC_RGUI, KC_LALT, KC_RCTL, MO(3)
     //└────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┘
    ),
    [1] = LAYOUT(
@@ -135,7 +108,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ┌───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┐
      * │       │       │       │       │       │       │       │       │       │       │       │       │
      * │  ---  │ Next  │  F7   │  F8   │  F9   │  F14  │  F15  │  P7   │  P8   │  P9   │  ---  │  ---  │
-   //   * │       │       │       │       │       │       │       │       │       │       │       │       │
+     * │       │       │       │       │       │       │       │       │       │       │       │       │
      * ├───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┤
      * │       │       │       │       │       │       │       │       │       │       │       │       │
      * │  ---  │ Play  │  F4   │  F5   │  F6   │  F12  │  F13  │  P4   │  P5   │  P6   │  ---  │  ---  │
