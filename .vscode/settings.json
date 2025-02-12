@@ -1,0 +1,18 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "C_Cpp.configurationWarnings": "disabled",
+    "C_Cpp.intelliSenseEngineFallback": "disabled",
+    "C_Cpp.autocomplete": "disabled",
+    "C_Cpp.suggestSnippets": false,
+    "C_Cpp.formatting": "disabled",
+    "editor.formatOnSave": false,
+    "files.associations": {
+        "*.h": "c",
+        "*.c": "c",
+        "*.inc": "c",
+        "*.cpp": "cpp",
+        "*.hpp": "cpp",
+        "*.mk": "makefile"
+    }
+}
