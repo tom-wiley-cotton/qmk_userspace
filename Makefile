@@ -14,3 +14,9 @@ endif
 
 %:
 	+$(MAKE) -C $(QMK_FIRMWARE_ROOT) $(MAKECMDGOALS) QMK_USERSPACE=$(QMK_USERSPACE)
+
+flash:
+	@qmk flash -kb planck/rev6_drop -km wileycotton
+
+compile:
+	@qmk compile -kb planck/rev6_drop -km wileycotton
