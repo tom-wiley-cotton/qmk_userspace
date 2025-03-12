@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
     //│  esc   │  ctl   │   alt  │  cmd   │  rse   │        │  bspc  │  lwr   │  cmd   │  alt   │  ctl   │   fn   │
-       KC_ESC,  KC_LCTL, KC_LALT, KC_LGUI, KC_SPC,   MO(1),  OSL(2), KC_BSPC,   KC_RGUI, KC_LALT, KC_RCTL, KC_ENT
+       KC_ESC,  KC_LCTL, KC_LALT, KC_LGUI, KC_SPC,   OSL(1),  OSL(2), KC_BSPC,   KC_RGUI, KC_LALT, KC_RCTL, KC_ENT
     //└────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┘
    ),
    [1] = LAYOUT(
@@ -61,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
     //│  tab   │   a    │   s    │   d    │   f    │   g    │   h    │   j    │  k     │   l    │   ;    │    "   │
-       _______, _______, KC_HOME, KC_PGDN, KC_PGUP,  KC_END, KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT, _______, _______,
+       _______, _______, KC_HOME, KC_PGDN, KC_PGUP,  KC_END, KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT, KC_ENT, _______,
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
     //│  shft  │   z    │   x    │   c    │   v    │   b    │   n    │   m    │   ,    │    .   │   /    │  shft  │
        _______, _______, _______, MS_WHLU, MS_WHLD, _______, KC_EQL,  KC_MINS, _______, _______, _______, _______,
@@ -94,7 +94,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        _______, KC_EXLM,  KC_AT,  KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, _______,
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
     //│  tab   │   a    │   s    │   d    │   f    │   g    │   h    │   j    │  k     │   l    │   ;    │    "   │
-       _______, _______, KC_LT,   KC_GT,   KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, KC_BSLS, KC_PIPE, _______, _______,
+       _______, _______, KC_LT,   KC_GT,   KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, KC_BSLS, KC_PIPE, KC_ENT, _______,
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
     //│  shft  │   z    │   x    │   c    │   v    │   b    │   n    │   m    │   ,    │    .   │   /    │  shft  │
        _______, _______, _______, _______, _______, _______, KC_EQL,  KC_MINS, _______, _______, _______, _______,
@@ -119,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * │       │       │       │       │       │       │       │       │       │       │       │       │
      * ├───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┤
      * │  Esc  │ Ctrl  │  Alt  │  Cmd  │  RSE  │ Space │ Bkspc │  LWR  │  Cmd  │  Alt  │ Ctrl  │  FN   │
-     * │ Reset │  ---  │  ---  │  ---  │ Play  │ Prev  │ Next  │  ---  │  ---  │  ---  │  ---  │  ---  │
+     * │ Reset │  ---  │ REWND │  Prev │ Play  │ Next  │ FWD   │  ---  │  ---  │  ---  │  ---  │  ---  │
      * │       │       │       │       │       │       │       │       │       │       │       │       │
      * └───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘ */
     //┌────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐
@@ -133,7 +133,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        _______, KC_P1,   KC_P2,   KC_P3,   KC_P4,   KC_P5,   KC_P6,   KC_P7,   KC_P8,   KC_P9,   _______, _______,
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
     //│  esc   │  ctl   │   alt  │  cmd   │  rse   │        │  bspc  │  lwr   │  cmd   │  alt   │  ctl   │   fn   │
-       QK_BOOT, _______, _______, _______, KC_MPLY, KC_MPRV, KC_MNXT, _______, _______, _______, _______, _______
+       QK_BOOT, _______, KC_MRWD, KC_MPRV, KC_MPLY, KC_MNXT, KC_MFFD, _______, _______, _______, _______, _______
     //└────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┘
    ),
 };
